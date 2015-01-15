@@ -24,7 +24,7 @@ Completed stories:
 
 ## Credit
 - GIF created with [LiceCap](http://www.cockos.com/licecap/).
-- [Tutorial video](http://vimeo.com/102084767) 
+- [@timothy1ee](https://github.com/timothy1ee) for the great [tutorial video](http://vimeo.com/102084767) 
 
 ## License
 
