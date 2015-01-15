@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +29,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
+        updateTip()
+    }
+    
+    func updateTip() {
         let tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipPercentageControl.selectedSegmentIndex]
         
@@ -57,6 +62,9 @@ class ViewController: UIViewController {
         default:
             tipPercentageControl.selectedSegmentIndex = 0
         }
+        
+        // Recalculate the tip
+        updateTip()
     }
 }
 
