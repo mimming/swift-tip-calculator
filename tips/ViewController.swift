@@ -45,6 +45,18 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var defaultTip = defaults.integerForKey("default_tip")
+        println("got default tip: \(defaultTip)")
+        switch defaultTip {
+        case 0...2:
+            tipPercentageControl.selectedSegmentIndex = defaultTip
+        default:
+            tipPercentageControl.selectedSegmentIndex = 0
+        }
+    }
 }
 
