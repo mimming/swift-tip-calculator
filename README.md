@@ -9,10 +9,10 @@ This is an implementation of the Swift tip calculator built by following this wo
 
 ## What's different
 
-There is one place where this app's implementation of [`ViewController.swift`] diverges from the code featured in the video.
-
-- [21:45](http://vimeo.com/102084767#t=21m45s): `bridgeToObjectiveC` is gone. Use `as NSString` instead.
+- There is one place where this app's implementation of [`ViewController.swift`] diverges from the code featured in the video. At [21:45](http://vimeo.com/102084767#t=21m45s) an internal method, `bridgeToObjectiveC` is used. I use `as NSString` instead.
         var billAmount = (billField.text as NSString).doubleValue
+
+- A settings modal has been added. It allows the user to set a default tip.
 
 ## License
 
